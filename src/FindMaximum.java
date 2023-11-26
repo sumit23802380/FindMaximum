@@ -6,21 +6,17 @@ import java.util.Scanner;
  */
 public class FindMaximum {
     public static void main(String[] args) {
-        int testCases=3;
+        int testCases=1;
         Scanner sc = new Scanner(System.in);
         for(int i=1;i<=testCases;i++){
             // change the name of variable accordingly to get the input
-            Integer num1 = sc.nextInt();
-            Integer num2 = sc.nextInt();
-            Integer num3 = sc.nextInt();
-            sc.nextLine();
-            FindMaximumGeneric<Integer> intFindMax = new FindMaximumGeneric<>(num1 , num2 , num3);
+            FindMaximumGeneric<Integer> intFindMax = new FindMaximumGeneric<>();
+            FindMaximumGeneric<String> stringFindMax = new FindMaximumGeneric<>();
+            FindMaximumGeneric<Float> floatFindMax = new FindMaximumGeneric<>();
             System.out.println(" ");
             System.out.println("TestCase "+ i +":");
-            System.out.println("num1 : " + num1);
-            System.out.println("num2 : " + num2);
-            System.out.println("num3 : " + num3);
-            System.out.println("Max Element : " + intFindMax.testMaximum());
+            System.out.println("Max Element : " + intFindMax.testMaximum(1 , 2 , 3));
+            System.out.println("Max Element : " + stringFindMax.testMaximum("abc" , "def"));
             System.out.println("-------------------------------------------");
         }
         sc.close();
