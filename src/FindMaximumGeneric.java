@@ -5,13 +5,22 @@ import java.util.Arrays;
  * @desc : Find the maximum elements for the generic type elements
  */
 public class FindMaximumGeneric <T extends Comparable<T>>{
-    /**
-     * @desc : Internal method to call the static findMaximum method
+    /*
+     * @desc : Internal method to call the static findMaximum method and calling printMax Method
      * @params : 
-     * @return : T
+     * @return :
      */
-    public T testMaximum(T... elements){
-        return findMaximum(elements);
+    public void testMaximum(T... elements){
+        T maxElement= findMaximum(elements);
+        printMax(maxElement);
+    }
+    /*
+     * @desc : Prints max element
+     * @params : T maxElement
+     * @return :
+     */
+    private void printMax(T maxElement){
+        System.out.println("Max Element in given element is : "+maxElement);
     }
     /*
      * @desc :Finds the maximum Element among three Generic elements extending Comparable<T>

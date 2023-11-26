@@ -15,8 +15,9 @@ public class FindMaximum {
             FindMaximumGeneric<Float> floatFindMax = new FindMaximumGeneric<>();
             System.out.println(" ");
             System.out.println("TestCase "+ i +":");
-            System.out.println("Max Element : " + intFindMax.testMaximum(1 , 2 , 3));
-            System.out.println("Max Element : " + stringFindMax.testMaximum("abc" , "def"));
+            intFindMax.testMaximum(1 , 2 , 3);
+            floatFindMax.testMaximum(56.3F, 191.3F);
+            stringFindMax.testMaximum("abc" , "def");
             System.out.println("-------------------------------------------");
         }
         sc.close();
