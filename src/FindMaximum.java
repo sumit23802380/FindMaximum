@@ -6,44 +6,12 @@ import java.util.Scanner;
  */
 public class FindMaximum {
     /*
-     * @desc :Finds the maximum Integer among three elements
+     * @desc :Finds the maximum Element among three Generic elements extending Comparable<T>
      * @params : num1 , num2 and num3
-     * @return : maximum Integer among three
+     * @return : maximum Element among three
      */
-    private static Integer findMaximum(Integer num1 , Integer num2 , Integer num3){
-        Integer maxElement = num1;
-        if(maxElement.compareTo(num2)<0){
-            maxElement = num2;
-        }
-        if(maxElement.compareTo(num3)<0){
-            maxElement = num3;
-        }
-        return maxElement;
-    }
-
-    /*
-     * @desc :Finds the maximum Float number among three elements
-     * @params : float numbers num1 , num2 and num3
-     * @return : maximum float number among three
-     */
-    private static Float findMaximum(Float num1 , Float num2 , Float num3){
-        Float maxElement = num1;
-        if(maxElement.compareTo(num2)<0){
-            maxElement = num2;
-        }
-        if(maxElement.compareTo(num3)<0){
-            maxElement = num3;
-        }
-        return maxElement;
-    }
-
-    /*
-     * @desc :Finds the maximum Float number among three elements
-     * @params : float numbers num1 , num2 and num3
-     * @return : maximum float number among three
-     */
-    private static String findMaximum(String num1 , String num2 , String num3){
-        String maxElement = num1;
+    private static <T extends Comparable<T>>  T findMaximum(T num1 , T num2 , T num3){
+        T maxElement = num1;
         if(maxElement.compareTo(num2)<0){
             maxElement = num2;
         }
@@ -56,33 +24,7 @@ public class FindMaximum {
         int testCases=3;
         Scanner sc = new Scanner(System.in);
         for(int i=1;i<=testCases;i++){
-              // for use case 1
-//            Integer num1 = sc.nextInt();
-//            Integer num2 = sc.nextInt();
-//            Integer num3 = sc.nextInt();
-//            sc.nextLine();
-//            System.out.println(" ");
-//            System.out.println("TestCase "+ i +":");
-//            System.out.println("num1 : " + num1);
-//            System.out.println("num2 : " + num2);
-//            System.out.println("num3 : " + num3);
-//            System.out.println("Max Element : " + findMaximum(num1 , num2 , num3));
-//            System.out.println("-------------------------------------------");
-
-//            // for use case 2
-//            Float num1 = sc.nextFloat();
-//            Float num2 = sc.nextFloat();
-//            Float num3 = sc.nextFloat();
-//            sc.nextLine();
-//            System.out.println(" ");
-//            System.out.println("TestCase "+ i +":");
-//            System.out.println("num1 : " + num1);
-//            System.out.println("num2 : " + num2);
-//            System.out.println("num3 : " + num3);
-//            System.out.println("Max Element : " + findMaximum(num1 , num2 , num3));
-//            System.out.println("-------------------------------------------");
-
-//            // for use case 3
+            // change the name of variable accordingly to get the input
             String num1 = sc.next();
             String num2 = sc.next();
             String num3 = sc.next();
@@ -94,7 +36,6 @@ public class FindMaximum {
             System.out.println("num3 : " + num3);
             System.out.println("Max Element : " + findMaximum(num1 , num2 , num3));
             System.out.println("-------------------------------------------");
-
         }
         sc.close();
     }
@@ -129,6 +70,11 @@ TestCases added for Use Case 3
 abc aab aaa
 my name is
 hello world zebra
+
+TestCases added for Refactor 1
+String : abc aab aaa
+Float  : 15.1 22.7 21.0
+Integer : 7 5 12
 
 
  */
